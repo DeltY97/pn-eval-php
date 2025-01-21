@@ -26,8 +26,17 @@ class Model {
      *
      * @return Array
      */
-    public function getEvents() {
+    public function getEvents(string $username) {
         // à vous de l'écrire - allez voir ce qu'on a déjà fait en php
+        $sqlQuery = "SELECT id, pseudo FROM users WHERE username = :username";
+        $statement = $this->bdd->prepare($sqlQuery);
+        $statement->execute([
+            'username' => $username
+        ]);
+        
+        $req = $statement->fetch();
+
+        return $req;
     }
 
 }

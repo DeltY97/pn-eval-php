@@ -10,5 +10,20 @@
 </head>
 <body>
     <!-- Créer un formulaire pour récupérer le nom de l'utilisateur connecté -->
+    <div id="formulaire">
+        <form method="post" id="loginForm">
+            <div class="formLine">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="usename" id="username" name="username" required>
+            </div>
+            <!-- <div class="formLine">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div> -->
+            <div class="formLine">
+                <input type="submit" value="Se connecter" class="loginBouton">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
